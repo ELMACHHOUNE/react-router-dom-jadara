@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [sent, setSent] = useState(false);
 
   function handleChange(e) {
     const { name, value } = e.target;
@@ -10,10 +11,11 @@ export default function Contact() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    // Non-functional demo: log form values. In real app, hook to an API.
+    // Demo: log form values and show inline confirmation. Replace with API call as needed.
     console.log("Enroll request:", form);
-    alert("Thanks! We received your request (demo).");
+    setSent(true);
     setForm({ name: "", email: "", message: "" });
+    setTimeout(() => setSent(false), 5000);
   }
 
   return (
@@ -27,6 +29,11 @@ export default function Contact() {
           Fill this form to ask about courses or request enrollment info.
         </p>
 
+        {sent && (
+          <div className="mb-4 rounded-md bg-green-50 border border-green-200 p-3 text-sm text-green-800">
+            Thanks — we received your request and will contact you shortly.
+          </div>
+        )}
         <label className="block mb-3">
           <span className="text-sm text-gray-700">Name</span>
           <input

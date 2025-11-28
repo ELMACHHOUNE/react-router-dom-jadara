@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function Home() {
   return (
     <div className="max-w-4xl w-full text-center">

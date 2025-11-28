@@ -1,1 +1,14 @@
 @import "tailwindcss";
+
+:root {
+	--brand-1: #3d348b; /* deep indigo */
+	--brand-2: #7678ed; /* soft indigo */
+	--accent-1: #f7b801; /* yellow */
+	--accent-2: #f18701; /* orange */
+	--accent-3: #f35b04; /* red-orange */
+}
+
+body {
+	background-color: #f8fafc; /* light neutral */
+	color: #0f172a;
+}

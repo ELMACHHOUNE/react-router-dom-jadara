@@ -11,7 +11,7 @@ export default function App() {
       <div className="max-w-5xl mx-auto px-6">
         <Navbar />
 
-        <main className="flex-grow py-12">
+        <main className="grow py-12">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
