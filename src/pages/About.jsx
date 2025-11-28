@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function About() {
   return (
@@ -55,15 +56,21 @@ export default function About() {
         </section>
 
         <div className="flex items-center gap-4">
-          <a href="/" className="text-blue-600 hover:underline">
+          <Link to="/" className="text-[var(--brand-2)] hover:underline">
             ← Back to Home
-          </a>
-          <a
-            href="/contact"
-            className="bg-blue-600 text-white px-4 py-2 rounded"
+          </Link>
+          <Link
+            to="/contact"
+            className="inline-block"
+            style={{
+              backgroundColor: "var(--accent-2)",
+              color: "white",
+              padding: "8px 12px",
+              borderRadius: 6,
+            }}
           >
             Contact / Enroll
-          </a>
+          </Link>
         </div>
       </div>
     </div>

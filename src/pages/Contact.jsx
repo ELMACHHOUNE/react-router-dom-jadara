@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -70,14 +71,14 @@ export default function Contact() {
 
         <div className="flex items-center justify-between">
           <button
-            className="bg-blue-600 text-white px-4 py-2 rounded"
+            className="bg-[var(--brand-1)] text-white px-4 py-2 rounded"
             type="submit"
           >
             Send
           </button>
-          <a href="/" className="text-gray-600 hover:underline">
+          <Link to="/" className="text-gray-600 hover:underline">
             ← Back
-          </a>
+          </Link>
         </div>
       </form>
     </div>

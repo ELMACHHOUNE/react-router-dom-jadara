@@ -1,54 +1,86 @@
+import React from "react";
+import { Link } from "react-router-dom";
+import { BookOpen, Layers, Award } from "lucide-react";
+
 export default function Home() {
   return (
-    <div className="max-w-4xl w-full text-center">
-      <main>
-        <h2 className="text-5xl font-bold mb-4">
-          Learn React, build real projects
-        </h2>
-        <p className="text-lg text-gray-600 mb-8">
-          Hands-on React courses for beginners and intermediates. Follow guided
-          lessons, build projects, and get ready for real-world development.
-        </p>
-
-        <a
-          href="/contact"
-          className="inline-block bg-blue-600 text-white px-6 py-3 rounded-md shadow hover:bg-blue-700"
-        >
-          Enroll Now
-        </a>
-
-        <section
-          id="features"
-          className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 text-left"
-        >
-          <div className="p-6 bg-white rounded-lg shadow">
-            <h3 className="font-semibold mb-2">Beginner-friendly</h3>
-            <p className="text-sm text-gray-600">
-              Start with fundamentals and progress step-by-step.
+    <div className="w-full">
+      <section className="bg-white rounded-lg shadow p-10">
+        <div className="md:flex md:items-center md:gap-8">
+          <div className="md:flex-1 text-left">
+            <h1 className="text-4xl md:text-5xl font-extrabold mb-4 text-gray-900">
+              Master React with practical projects
+            </h1>
+            <p className="text-lg text-gray-600 mb-6">
+              Project-driven courses, modern workflows, and real-world best
+              practices to help you ship production-ready apps.
             </p>
+            <div className="flex gap-4">
+              <Link
+                to="/contact"
+                className="inline-block"
+                style={{
+                  backgroundColor: "var(--brand-2)",
+                  color: "white",
+                  padding: "10px 18px",
+                  borderRadius: 8,
+                }}
+              >
+                Get Started
+              </Link>
+              <Link
+                to="/about"
+                className="text-gray-700 border border-gray-200 px-5 py-3 rounded-md hover:bg-gray-50"
+              >
+                Learn More
+              </Link>
+            </div>
           </div>
-          <div className="p-6 bg-white rounded-lg shadow">
-            <h3 className="font-semibold mb-2">Project-based</h3>
-            <p className="text-sm text-gray-600">
-              Build real apps (to-do, dashboard, blog) as you learn.
-            </p>
-          </div>
-          <div className="p-6 bg-white rounded-lg shadow">
-            <h3 className="font-semibold mb-2">Certificate</h3>
-            <p className="text-sm text-gray-600">
-              Receive a completion certificate to showcase your skills.
-            </p>
-          </div>
-        </section>
 
-        <section id="about" className="mt-12 text-left">
-          <h3 className="text-xl font-semibold mb-2">Why ReactStudy?</h3>
+          <aside className="md:w-96 mt-8 md:mt-0">
+            <div className="bg-gray-50 p-5 rounded-md">
+              <h3 className="font-semibold mb-3 flex items-center gap-2">
+                <BookOpen style={{ color: "var(--brand-1)" }} /> Popular course
+              </h3>
+              <ul className="text-sm text-gray-600 space-y-2">
+                <li className="flex items-center gap-2">
+                  <Layers style={{ color: "var(--brand-2)" }} /> React
+                  Fundamentals — 8 lessons
+                </li>
+                <li className="flex items-center gap-2">
+                  <Award style={{ color: "var(--accent-2)" }} /> Hooks & State —
+                  6 lessons
+                </li>
+                <li className="flex items-center gap-2">
+                  <BookOpen style={{ color: "var(--accent-3)" }} /> Routing &
+                  Forms — 5 lessons
+                </li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="p-6 bg-white rounded-lg shadow">
+          <h3 className="font-semibold mb-2">Structured curriculum</h3>
           <p className="text-sm text-gray-600">
-            Clear lessons, modern tooling, and practical exercises designed to
-            turn learners into builders.
+            Clear learning paths from fundamentals to advanced patterns.
           </p>
-        </section>
-      </main>
+        </div>
+        <div className="p-6 bg-white rounded-lg shadow">
+          <h3 className="font-semibold mb-2">Hands-on projects</h3>
+          <p className="text-sm text-gray-600">
+            Build a portfolio of real apps you can show to employers.
+          </p>
+        </div>
+        <div className="p-6 bg-white rounded-lg shadow">
+          <h3 className="font-semibold mb-2">Mentor feedback</h3>
+          <p className="text-sm text-gray-600">
+            Optional mentor reviews to guide your growth and code quality.
+          </p>
+        </div>
+      </section>
     </div>
   );
 }
