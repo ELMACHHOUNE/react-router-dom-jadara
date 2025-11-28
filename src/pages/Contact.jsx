@@ -71,7 +71,8 @@ export default function Contact() {
 
         <div className="flex items-center justify-between">
           <button
-            className="bg-[var(--brand-1)] text-white px-4 py-2 rounded"
+            style={{ backgroundColor: "var(--brand-1)", color: "white" }}
+            className="px-4 py-2 rounded"
             type="submit"
           >
             Send

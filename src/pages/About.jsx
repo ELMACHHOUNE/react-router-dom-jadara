@@ -36,6 +36,47 @@ export default function About() {
         </section>
 
         <section className="mb-8">
+          <h2 className="text-2xl font-semibold mb-2">Instructors</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="flex items-center gap-3">
+              <img
+                src="/images/instructor-1.svg"
+                alt="Jane Doe"
+                className="w-16 h-16 rounded-full"
+              />
+              <div>
+                <div className="font-semibold">Jane Doe</div>
+                <div className="text-sm text-gray-600">Lead Instructor</div>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-3">
+              <img
+                src="/images/instructor-2.svg"
+                alt="John Smith"
+                className="w-16 h-16 rounded-full"
+              />
+              <div>
+                <div className="font-semibold">John Smith</div>
+                <div className="text-sm text-gray-600">Curriculum</div>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-3">
+              <img
+                src="/images/instructor-3.svg"
+                alt="Alex Lee"
+                className="w-16 h-16 rounded-full"
+              />
+              <div>
+                <div className="font-semibold">Alex Lee</div>
+                <div className="text-sm text-gray-600">Design</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">Outcomes</h2>
           <div className="grid grid-cols-3 gap-4 text-center">
             <div>
@@ -56,7 +97,11 @@ export default function About() {
         </section>
 
         <div className="flex items-center gap-4">
-          <Link to="/" className="text-[var(--brand-2)] hover:underline">
+          <Link
+            to="/"
+            style={{ color: "var(--brand-2)" }}
+            className="hover:underline"
+          >
             ← Back to Home
           </Link>
           <Link

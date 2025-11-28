@@ -8,18 +8,21 @@ export default function Courses() {
       id: 1,
       title: "React Fundamentals",
       lessons: 8,
+      image: "/images/course-react.svg",
       icon: <BookOpen style={{ color: "var(--brand-1)" }} />,
     },
     {
       id: 2,
       title: "Hooks & State",
       lessons: 6,
+      image: "/images/course-react.svg",
       icon: <Code style={{ color: "var(--brand-2)" }} />,
     },
     {
       id: 3,
       title: "Routing & Forms",
       lessons: 5,
+      image: "/images/course-react.svg",
       icon: <Monitor style={{ color: "var(--accent-2)" }} />,
     },
   ];
@@ -36,6 +39,11 @@ export default function Courses() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {courses.map((c) => (
           <article key={c.id} className="p-5 bg-white rounded-lg shadow">
+            <img
+              src={c.image}
+              alt={`${c.title} thumbnail`}
+              className="w-full h-28 object-cover rounded-md mb-3"
+            />
             <div className="flex items-center gap-3 mb-3">
               {c.icon}
               <h3 className="font-semibold">{c.title}</h3>
